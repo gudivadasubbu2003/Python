@@ -1,0 +1,14 @@
+a_string = 'Was it a car or a cat I saw'
+def palindrome(a_string):
+    a_string = a_string.lower().replace(' ', '')
+    first, last = 0, len(a_string) - 1
+    while(first < last):
+        if(a_string[first] == a_string[last]):
+            first += 1
+            last -= 1
+        else:
+            return False
+
+    return True
+
+print(palindrome(a_string))
